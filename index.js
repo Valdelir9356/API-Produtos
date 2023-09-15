@@ -70,6 +70,10 @@ jwt.verify(token, SECRET, function( err, decoded) {
 
 }
 
+server.get("/", (req, res)=>{
+   return res.send("bem vindo a api de produtod na nuvem")
+})
+
 server. post("/login",(req, res, next) =>{
    if(req.body.usuario ==="ENGPRO25" && req.body.senha ==="25"){
       //id do usuario  logado
